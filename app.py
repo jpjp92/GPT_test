@@ -8,7 +8,7 @@ client = Client()
 
 # 페이지 설정: 제목, 아이콘, 레이아웃 설정
 st.set_page_config(
-    page_title="GPT-4o Chat",
+    page_title="Chat with AI",
     page_icon="📝",
     layout="centered"
 )
@@ -18,7 +18,7 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 # 앱 제목 표시
-st.title("GPT-4o-mini Chat 🤖")
+st.title("Chat with AI 🤖")
 
 # 채팅 메시지 UI 출력
 for message in st.session_state.chat_history:
@@ -27,7 +27,7 @@ for message in st.session_state.chat_history:
         st.markdown(message['content'])
 
 # 사용자 입력 창
-user_prompt = st.chat_input("GPT-4o-mini에게 질문해보세요!")
+user_prompt = st.chat_input("AI에게 질문해보세요!")
 
 if user_prompt:
     # 사용자의 입력 메시지를 UI에 표시하고 세션 상태에 저장
