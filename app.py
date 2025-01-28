@@ -91,7 +91,7 @@ with col1:
         # 모델 처리
         start_time = time.time()
         response = client.chat.completions.create(
-            model="claude-3-5-sonnet",
+            model="gpt-4",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant"},
                 *st.session_state.chat_history
