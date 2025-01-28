@@ -88,10 +88,10 @@ with col1:
         st.chat_message("user").markdown(user_prompt)
         st.session_state.chat_history.append({"role": "user", "content": user_prompt})
 
-        # GPT 모델 처리
+        # 모델 처리
         start_time = time.time()
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="claude_3_5_sonnet",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant"},
                 *st.session_state.chat_history
