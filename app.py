@@ -54,7 +54,7 @@ if "session_id" not in st.session_state:
 
 # 닉네임 입력 및 설정
 with st.sidebar:
-    st.title("옵션 설정")
+    st.title("기본 설정")
     st.session_state.user_nickname = st.text_input(
         "닉네임 설정", placeholder="예: AI Lover", key="nickname_input"
     )
