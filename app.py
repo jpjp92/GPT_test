@@ -12,7 +12,7 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-# GPT-4o-mini 클라이언트 초기화
+# 클라이언트 초기화
 from g4f.client import Client
 client = Client()
 
@@ -91,7 +91,7 @@ with col1:
         # 모델 처리
         start_time = time.time()
         response = client.chat.completions.create(
-            model="llama_3_2_70b",
+            model="gpt_4",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant"},
                 *st.session_state.chat_history
